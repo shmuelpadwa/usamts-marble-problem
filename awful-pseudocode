@@ -1,0 +1,27 @@
+def permute_string(str):
+    if len(str) == 0:
+        return ['']
+    prev_list = permute_string(str[1:len(str)])
+    next_list = []
+    for i in range(0,len(prev_list)):
+        for j in range(0,len(str)):
+            new_str = prev_list[i][0:j]+str[0]+prev_list[i][j:len(str)-1]
+            if new_str not in next_list:
+                next_list.append(new_str)
+    return next_list
+
+#z = (permute_string('ABCDEFGHIJKLMNOPQRSTU'));
+redwins = []
+bluewins = []
+greenwins = []
+
+for number in range(0,(len(z))):
+  if (((G > A and G > B and G > C and G > D and G > E and G > F) or (H > A and H > B and H > C and H > D and H > E and H > F) or (I > A and I > B and I > C and I > D and I > E and I > F) or (J > A and J > B and J > C and J > D and J > E and J > F) or (K > A and K > B and K > C and K > D and K > E and K > F) or (L > A and L > B and L > C and L > D and L > E and L > F) or (M > A and M > B and M > C and M > D and M > E and M > F)) and ((N > A and N > B and N > C and N > D and N > E and N > F) or (O > A and O > B and O > C and O > D and O > E and O > F) or (P > A and P > B and P > C and P > D and P > E and P > F) or (Q > A and Q > B and Q > C and Q > D and Q > E and Q > F) or (R > A and R > B and R > C and R > D and R > E and R > F) or (S > A and S > B and S > C and S > D and S > E and S > F) or (T > A and T > B and T > C and T > D and T > E and T > F) or (U > A and U > B and U > C and U > D and U > E and U > F))):
+    redwins.append(z[number]
+  elif ((N > G and N > H and N > I and N > J and N > K and N > L and N > M) or (O > G and O > H and O > I and O > J and O > K and O > L and O > M or (P > G and P > H and P > I and P > J and P > K and P > L and P > M) or (Q > G and Q > H and Q > I and Q > J and Q > K and Q > L and Q > M) or (R > G and R > H and R > I and R > J and R > K and R > L and R > M) or (S > G and S > H and S > I and S > J and S > K and S > L and S > M) or (T > G and T > H and T > I and T > J and T > K and T > L and T > M) or (U > G and U > H and U > I and U > J and U > K and U > L and U > M)):
+    bluewins.append(z[number])
+  else:
+    greenwins.append(z[number])
+print (len(redwins))
+print (len(bluewins))
+print (len(greenwins))
